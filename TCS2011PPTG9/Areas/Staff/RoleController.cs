@@ -9,7 +9,8 @@ using Microsoft.AspNetCore.Authorization;
 namespace TCS2011PPTG9.Areas.Admin
 {
     [Area("Staff")]
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Manager, Coordinator")]
+
     public class RoleController : Controller
     {
         private readonly ApplicationDbContext _context;
